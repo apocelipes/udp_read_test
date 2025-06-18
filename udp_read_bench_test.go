@@ -126,7 +126,7 @@ BenchmarkReadFromUDP-10            	      48	  25219753 ns/op	   64064 B/op	    
 BenchmarkReadFromUPDAddrPort-10    	      50	  25412824 ns/op	       0 B/op	       0 allocs/op
 BenchmarkRecvmmsg-10               	      45	  24835418 ns/op	  296098 B/op	   10998 allocs/op
 PASS
-ok  	udptest	8.061s
+ok  	udpreadtest	8.061s
 */
 
 /*
@@ -138,7 +138,7 @@ BenchmarkReadFromUDP-4           	       3	 491391101 ns/op	   64064 B/op	    20
 BenchmarkReadFromUPDAddrPort-4   	       3	 474905637 ns/op	       0 B/op	       0 allocs/op
 BenchmarkRecvmmsg-4              	       3	 476800798 ns/op	   64920 B/op	    2005 allocs/op
 PASS
-ok  	udptest	5.801s
+ok  	udpreadtest	5.801s
 */
 
 /*
@@ -167,4 +167,16 @@ BenchmarkReadFromUPDAddrPort-24              211           5512309 ns/op        
 BenchmarkRecvmmsg-24                         212           5561909 ns/op           64568 B/op       2015 allocs/op
 PASS
 ok      udpreadtest     4.799s
+*/
+
+/*
+goos: linux
+goarch: arm64
+pkg: udpreadtest
+BenchmarkReadFrom-4              	       4	 265467281 ns/op	   64064 B/op	    2002 allocs/op
+BenchmarkReadFromUDP-4           	       4	 261408366 ns/op	   64064 B/op	    2002 allocs/op
+BenchmarkReadFromUPDAddrPort-4   	       4	 252192508 ns/op	       0 B/op	       0 allocs/op
+BenchmarkRecvmmsg-4              	       5	 245079165 ns/op	   64612 B/op	    2004 allocs/op
+PASS
+ok  	udpreadtest	4.194s
 */

@@ -7,7 +7,6 @@ import (
 	"time"
 
 	"golang.org/x/net/ipv4"
-	"golang.org/x/sys/unix"
 )
 
 func main() {
@@ -55,7 +54,7 @@ func sendBatch(conn net.PacketConn) {
 	}
 	pc := ipv4.NewPacketConn(conn)
 	for {
-		_, err := pc.WriteBatch(batchMsg, unix.MSG_ZEROCOPY)
+		_, err := pc.WriteBatch(batchMsg, flags)
 		if err != nil {
 			panic(err)
 		}
